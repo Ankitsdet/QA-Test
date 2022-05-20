@@ -1,0 +1,9 @@
+.idea
+.project
+.settings/*
+/bin/
+/target/
+screenshots/
+reports/
+target/
+
