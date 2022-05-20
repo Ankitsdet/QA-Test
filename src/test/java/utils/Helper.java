@@ -13,7 +13,7 @@ public class Helper {
 
     public static String captureScreenshot(WebDriver driver) {
         File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        String screenshotPath = System.getProperty("user.dir") + "./screenshots/lampenwelt" + getCurrentDateTime() + ".png";
+        String screenshotPath = System.getProperty("user.dir") + "./screenshots/Lampenwelt" + getCurrentDateTime() + ".png";
         try {
             org.openqa.selenium.io.FileHandler.copy(src, new File(screenshotPath));
         } catch (Exception e) {

@@ -24,8 +24,14 @@ public class ShoppingCartPage {
     @FindBy(xpath = "(//table[@class='totals-table ']//tr//td)[2]")
     WebElement tbl_totalPrice;
 
-    @FindBy(xpath = "(//table[@class='totals-table ']//tr//td)[5]")
+    @FindBy(xpath = "(//table[@class='totals-table ']//tr//td//span)[5]")
     WebElement tbl_shippingPrice;
+
+    @FindBy(xpath = "(//table[@class='totals-table ']//tr//td//span)[4]")
+    WebElement tbl_subTotal;
+
+    @FindBy(xpath = "(//table[@class='totals-table ']//tr//td//span)[6]")
+    WebElement tbl_bulkyGoodsSurcharge;
 
     public void selectQuantity() {
         BaseSpec.waitForElement(select_productQuantity);
@@ -37,8 +43,24 @@ public class ShoppingCartPage {
     }
 
     public String totalPrice() {
-        String totalPrice = tbl_totalPrice.getText();
-        return totalPrice;
+        return tbl_totalPrice.getText();
+    }
+
+    public String shippingPrice() {
+        return tbl_shippingPrice.getText();
+    }
+
+    public String subTotal() {
+        return tbl_subTotal.getText();
+    }
+
+    public String bulkyGoodsSurcharge() {
+        return tbl_bulkyGoodsSurcharge.getText();
+    }
+
+    public String totalShoppingCartAmount() {
+        String totalAmount = subTotal() + shippingPrice() + bulkyGoodsSurcharge();
+        return totalAmount.replace("0,00 €", "");
     }
 
 

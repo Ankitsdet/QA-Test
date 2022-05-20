@@ -1,14 +1,16 @@
 # qa-interview-lampenwelt
 
 ## Framework Design Approach
+
 it's a hybrid framework.
 
 ## Build tool
+
 Maven (3.8.4 or latest)
 
 ## Tools
-TestNG
 
+TestNG
 
 ## Steps to run the project are below
 
@@ -22,3 +24,7 @@ Observation:
 
 The text shown in search bar can have opacity/transparent property set, which would look more appealing.
 
+Note :
+
+1. I have added manual test cases sheet in the project (Name : Lampenwelt_TestCases.xlsx)
+2. There are 4 questions in the assignment. I would love to discuss and answers those questions in meeting.
